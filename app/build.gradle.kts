@@ -16,7 +16,7 @@ android {
                     from(components["release"])
                     groupId = "com.github.chavanNamrata10"
                     artifactId = "libraryTest"
-                    version = "1.0.3"
+                    version = "1.0.4"
                 }
             }
         }
@@ -70,9 +70,7 @@ android {
 
 
 dependencies {
-    implementation(files("libs/rockPaperScissors-debug.aar"))
 
-    implementation(mapOf("name" to "rockPaperScissors-debug", "ext" to "aar"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
