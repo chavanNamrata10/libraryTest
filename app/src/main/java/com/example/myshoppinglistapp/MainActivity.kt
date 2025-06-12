@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
                     try {
                         Class.forName("com.example.lib.YourClass")
                     } catch (e: ClassNotFoundException) {
-                        L   og.e("AAR_TEST", "Missing class!", e)
+                        Log.e("AAR_TEST", "Missing class!", e)
                     }
                 }
             }
