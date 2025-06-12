@@ -1,18 +1,35 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("maven-publish")
+//    alias(libs.plugins.androidApplication)
+//    alias(libs.plugins.jetbrainsKotlinAndroid)
+//    id("com.android.library")
 }
 
 android {
+
+    afterEvaluate {
+        publishing {
+            publications {
+                create<MavenPublication>("release") {
+                    from(components["release"])
+                    groupId = "com.github.chavanNamrata10"
+                    artifactId = "libraryTest"
+                    version = "1.0.2"
+                }
+            }
+        }
+    }
     namespace = "com.example.myshoppinglistapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.myshoppinglistapp"
+//        applicationId = "com.example.myshoppinglistapp"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+//        versionCode = 1
+//        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

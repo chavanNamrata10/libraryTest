@@ -1,6 +1,7 @@
 package com.example.myshoppinglistapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -32,11 +33,6 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Navigation()
 
-                    try {
-                        Class.forName("com.example.lib.YourClass")
-                    } catch (e: ClassNotFoundException) {
-                        Log.e("AAR_TEST", "Missing class!", e)
-                    }
                 }
             }
         }
