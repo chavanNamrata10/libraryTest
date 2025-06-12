@@ -16,7 +16,7 @@ android {
                     from(components["release"])
                     groupId = "com.github.chavanNamrata10"
                     artifactId = "libraryTest"
-                    version = "1.0.2"
+                    version = "1.0.3"
                 }
             }
         }
